@@ -13,6 +13,7 @@
 			buildPhases = (
 			);
 			dependencies = (
+				A9AA8C7722772C2B00323D94 /* PBXTargetDependency */,
 				602BD75320668C0A00D035F9 /* PBXTargetDependency */,
 				D6369DC21AAF109800B0CC43 /* PBXTargetDependency */,
 				DB4B64191FF8459E0069DA80 /* PBXTargetDependency */,
@@ -25,6 +26,14 @@
 
 /* Begin PBXBuildFile section */
 		602BD75120668B5900D035F9 /* utilities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D6DB1A3D1B9054A9007E6883 /* utilities.cpp */; };
+		A9AA8C6822772C1C00323D94 /* FFGL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D6DB1A2A1B9054A9007E6883 /* FFGL.cpp */; };
+		A9AA8C6A22772C1C00323D94 /* FFGLPluginInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D6DB1A311B9054A9007E6883 /* FFGLPluginInfo.cpp */; };
+		A9AA8C6B22772C1C00323D94 /* FFGLPluginInfoData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D6DB1A331B9054A9007E6883 /* FFGLPluginInfoData.cpp */; };
+		A9AA8C6C22772C1C00323D94 /* FFGLPluginManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D6DB1A341B9054A9007E6883 /* FFGLPluginManager.cpp */; };
+		A9AA8C6D22772C1C00323D94 /* FFGLPluginSDK.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D6DB1A371B9054A9007E6883 /* FFGLPluginSDK.cpp */; };
+		A9AA8C6E22772C1C00323D94 /* FFGLShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D6DB1A391B9054A9007E6883 /* FFGLShader.cpp */; };
+		A9AA8C6F22772C1C00323D94 /* FFGLFBO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D6DB1A691B906185007E6883 /* FFGLFBO.cpp */; };
+		A9AA8C7822772C3600323D94 /* StarWipe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A9AA8C6322772BFE00323D94 /* StarWipe.cpp */; };
 		A9F92E9D201A1C1500527E48 /* FFGL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D6DB1A2A1B9054A9007E6883 /* FFGL.cpp */; };
 		A9F92E9E201A1C1500527E48 /* FFGLPluginInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D6DB1A311B9054A9007E6883 /* FFGLPluginInfo.cpp */; };
 		A9F92EA0201A1C1500527E48 /* FFGLPluginInfoData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D6DB1A331B9054A9007E6883 /* FFGLPluginInfoData.cpp */; };
@@ -67,6 +76,13 @@
 			remoteGlobalIDString = A9F92E9A201A1C1500527E48;
 			remoteInfo = Fireworks;
 		};
+		A9AA8C7622772C2B00323D94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2DA285930AEE5D640030A4DD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A9AA8C6522772C1C00323D94;
+			remoteInfo = StarWipe;
+		};
 		D6369DC11AAF109800B0CC43 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2DA285930AEE5D640030A4DD /* Project object */;
@@ -96,6 +112,10 @@
 		2FD1224818853D700009EBA8 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = System/Library/Frameworks/QTKit.framework; sourceTree = SDKROOT; };
 		2FD1225318853FFB0009EBA8 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		2FD1226B188540470009EBA8 /* AddSubtract.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AddSubtract.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9AA8C6322772BFE00323D94 /* StarWipe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StarWipe.cpp; path = ../../source/plugins/StarWipe/StarWipe.cpp; sourceTree = "<group>"; };
+		A9AA8C6422772BFE00323D94 /* StarWipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StarWipe.h; path = ../../source/plugins/StarWipe/StarWipe.h; sourceTree = "<group>"; };
+		A9AA8C7422772C1C00323D94 /* StarWipe.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarWipe.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9AA8C7522772C1C00323D94 /* Add copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Add copy-Info.plist"; path = "/Users/joris/Documents/develop/HVFFGL/build/osx/Add copy-Info.plist"; sourceTree = "<absolute>"; };
 		A9F28D5818B37D0C007D7C87 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A9F28D5A18B37D12007D7C87 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		A9F92E8C201A1B8900527E48 /* Plugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Plugin.h; path = ../../../source/plugins/Fireworks/Plugin.h; sourceTree = "<group>"; };
@@ -148,6 +168,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A9AA8C7022772C1C00323D94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A9F92EA5201A1C1500527E48 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -184,6 +211,7 @@
 				E8D161130C5DF1DF0035D796 /* frameworks */,
 				2FD12214188538AC0009EBA8 /* source */,
 				2DA285A10AEE5E480030A4DD /* Products */,
+				A9AA8C7522772C1C00323D94 /* Add copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -194,6 +222,7 @@
 				DB4B63F41FF845820069DA80 /* Add.bundle */,
 				DB4B64161FF845920069DA80 /* Gradients.bundle */,
 				A9F92EA9201A1C1500527E48 /* Fireworks.bundle */,
+				A9AA8C7422772C1C00323D94 /* StarWipe.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -224,6 +253,15 @@
 			);
 			name = Add;
 			path = ../../source/plugins/Add;
+			sourceTree = "<group>";
+		};
+		A9AA8C6222772BDC00323D94 /* StarWipe */ = {
+			isa = PBXGroup;
+			children = (
+				A9AA8C6322772BFE00323D94 /* StarWipe.cpp */,
+				A9AA8C6422772BFE00323D94 /* StarWipe.h */,
+			);
+			name = StarWipe;
 			sourceTree = "<group>";
 		};
 		A9F92E8B201A1B6B00527E48 /* FireWorks */ = {
@@ -344,6 +382,7 @@
 		E8D165D40C5E177A0035D796 /* mixer plugins */ = {
 			isa = PBXGroup;
 			children = (
+				A9AA8C6222772BDC00323D94 /* StarWipe */,
 				A94EF73518A9161E006D59F0 /* Add */,
 			);
 			name = "mixer plugins";
@@ -376,6 +415,23 @@
 			name = AddSubtract;
 			productName = FFGLBrightness;
 			productReference = 2FD1226B188540470009EBA8 /* AddSubtract.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		A9AA8C6522772C1C00323D94 /* StarWipe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9AA8C7122772C1C00323D94 /* Build configuration list for PBXNativeTarget "StarWipe" */;
+			buildPhases = (
+				A9AA8C6622772C1C00323D94 /* Resources */,
+				A9AA8C6722772C1C00323D94 /* Sources */,
+				A9AA8C7022772C1C00323D94 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StarWipe;
+			productName = FFGLBrightness;
+			productReference = A9AA8C7422772C1C00323D94 /* StarWipe.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		A9F92E9A201A1C1500527E48 /* Fireworks */ = {
@@ -457,12 +513,20 @@
 				2FD12258188540470009EBA8 /* AddSubtract */,
 				DB4B63E51FF845820069DA80 /* Add */,
 				A9F92E9A201A1C1500527E48 /* Fireworks */,
+				A9AA8C6522772C1C00323D94 /* StarWipe */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		2FD1225B188540470009EBA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9AA8C6622772C1C00323D94 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -505,6 +569,21 @@
 				D6DB1A5C1B9054FE007E6883 /* FFGLShader.cpp in Sources */,
 				D69416C91B904EA200D30319 /* AddSubtract.cpp in Sources */,
 				D6DB1A6B1B906185007E6883 /* FFGLFBO.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9AA8C6722772C1C00323D94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9AA8C6822772C1C00323D94 /* FFGL.cpp in Sources */,
+				A9AA8C7822772C3600323D94 /* StarWipe.cpp in Sources */,
+				A9AA8C6A22772C1C00323D94 /* FFGLPluginInfo.cpp in Sources */,
+				A9AA8C6B22772C1C00323D94 /* FFGLPluginInfoData.cpp in Sources */,
+				A9AA8C6C22772C1C00323D94 /* FFGLPluginManager.cpp in Sources */,
+				A9AA8C6D22772C1C00323D94 /* FFGLPluginSDK.cpp in Sources */,
+				A9AA8C6E22772C1C00323D94 /* FFGLShader.cpp in Sources */,
+				A9AA8C6F22772C1C00323D94 /* FFGLFBO.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,6 +640,11 @@
 			isa = PBXTargetDependency;
 			target = A9F92E9A201A1C1500527E48 /* Fireworks */;
 			targetProxy = 602BD75220668C0A00D035F9 /* PBXContainerItemProxy */;
+		};
+		A9AA8C7722772C2B00323D94 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A9AA8C6522772C1C00323D94 /* StarWipe */;
+			targetProxy = A9AA8C7622772C2B00323D94 /* PBXContainerItemProxy */;
 		};
 		D6369DC21AAF109800B0CC43 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -639,6 +723,46 @@
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				PREBINDING = NO;
 				PRODUCT_NAME = AddSubtract;
+				WRAPPER_EXTENSION = bundle;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		A9AA8C7222772C1C00323D94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = "Add copy-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				PREBINDING = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = bundle;
+				ZERO_LINK = NO;
+			};
+			name = Debug;
+		};
+		A9AA8C7322772C1C00323D94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = "Add copy-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				PREBINDING = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = bundle;
 				ZERO_LINK = NO;
 			};
@@ -795,6 +919,15 @@
 			buildConfigurations = (
 				2FD12269188540470009EBA8 /* Debug */,
 				2FD1226A188540470009EBA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9AA8C7122772C1C00323D94 /* Build configuration list for PBXNativeTarget "StarWipe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9AA8C7222772C1C00323D94 /* Debug */,
+				A9AA8C7322772C1C00323D94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
