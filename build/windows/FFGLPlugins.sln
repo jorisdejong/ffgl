@@ -20,6 +20,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CustomThumbnail", "CustomTh
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameOfLife", "GameOfLife.vcxproj", "{44092F97-6103-45DA-B988-5082A32EAA0C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SpoutRoundTrip", "SpoutRoundTrip.vcxproj", "{A5E007C5-640C-4CB3-9660-FF385D6CE9C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -50,6 +52,10 @@ Global
 		{44092F97-6103-45DA-B988-5082A32EAA0C}.Debug|x64.Build.0 = Debug|x64
 		{44092F97-6103-45DA-B988-5082A32EAA0C}.Release|x64.ActiveCfg = Release|x64
 		{44092F97-6103-45DA-B988-5082A32EAA0C}.Release|x64.Build.0 = Release|x64
+		{A5E007C5-640C-4CB3-9660-FF385D6CE9C2}.Debug|x64.ActiveCfg = Debug|x64
+		{A5E007C5-640C-4CB3-9660-FF385D6CE9C2}.Debug|x64.Build.0 = Debug|x64
+		{A5E007C5-640C-4CB3-9660-FF385D6CE9C2}.Release|x64.ActiveCfg = Release|x64
+		{A5E007C5-640C-4CB3-9660-FF385D6CE9C2}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,6 +67,7 @@ Global
 		{96F220F8-DF7E-49AB-9E51-394676061B00} = {26AC2413-23B7-4D1F-BB58-17D67106F3F1}
 		{01FC8291-A59A-4D36-9F2A-31E1D5998BD0} = {26AC2413-23B7-4D1F-BB58-17D67106F3F1}
 		{44092F97-6103-45DA-B988-5082A32EAA0C} = {F16144DC-83FA-4B2B-8E05-8BE54C7236DF}
+		{A5E007C5-640C-4CB3-9660-FF385D6CE9C2} = {F16144DC-83FA-4B2B-8E05-8BE54C7236DF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {28436461-C06F-497A-8594-636977E4CDAF}
