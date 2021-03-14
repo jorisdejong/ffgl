@@ -74,6 +74,12 @@ FFResult SpoutRoundTrip::Render( ProcessOpenGLStruct* inputTextures )
 		spoutReceiver.spout.UnBindSharedTexture();
 	}
 
+	if ( strcmp ( senderName, spoutSender.GetName() ) != 0 )
+	{
+		spoutSender.ReleaseSender();
+		spoutSender.SetSenderName( senderName );
+	}
+
 	
 	return FF_SUCCESS;
 }
@@ -98,7 +104,6 @@ FFResult SpoutRoundTrip::SetTextParameter( unsigned int index, const char* text 
 	{
 	case 0:
 		senderName = text;
-		spoutSender.SetSenderName( senderName );
 		return FF_SUCCESS;
 		break;
 	case 1:
