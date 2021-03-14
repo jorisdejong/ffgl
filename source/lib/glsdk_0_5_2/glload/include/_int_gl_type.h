@@ -4,7 +4,7 @@
 #error Attempt to include auto-generated header after including glew.h
 #endif
 #if defined(__gl_h_) || defined(__GL_H__)
-#error Attempt to include auto-generated header after including gl.h
+//#error Attempt to include auto-generated header after including gl.h
 #endif
 #if defined(__glext_h_) || defined(__GLEXT_H_)
 #error Attempt to include auto-generated header after including glext.h
