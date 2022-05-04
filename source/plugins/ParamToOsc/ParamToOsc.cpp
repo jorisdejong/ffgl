@@ -25,17 +25,19 @@ ParamToOsc::~ParamToOsc()
 
 FFResult ParamToOsc::SetFloatParameter( unsigned int index, float value )
 {
+	auto result = Effect::SetFloatParameter( index, value );
 	sendOsc();
-	return Effect::SetFloatParameter( index, value );
+	return result;
 }
 
 FFResult ParamToOsc::SetTextParameter( unsigned int index, const char* value )
 {
+	auto result = Effect::SetTextParameter( index, value );
 	if( index == 1 || index == 2 )
 		setPort();
 	else
 		sendOsc();
-	return Effect::SetTextParameter( index, value );
+	return result;
 }
 
 void ParamToOsc::sendOsc()
