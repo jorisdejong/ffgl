@@ -12,11 +12,18 @@ public:
 	ParamToOsc();
 	~ParamToOsc();
 
+	//override the default FFGL implementations so we can strip some of the crud that comes with inheriting from Effect
+	//I do however want its implementations of the param getter and setters
+	FFResult InitGL( const FFGLViewportStruct* viewPort ) override;
+	FFResult ProcessOpenGL( ProcessOpenGLStruct* inputTextures ) override;
+	FFResult DeInitGL() override;
+
 	std::shared_ptr< ffglqs::Param > animParam;
 	std::shared_ptr< ffglqs::ParamText > ipParam;
 	std::shared_ptr< ffglqs::ParamText > portParam;
 	std::shared_ptr< ffglqs::ParamText > addressParam;
 
+	//we use these as callbacks to know when a param has been changed in Resolume
 	FFResult SetFloatParameter( unsigned int index, float value ) override;
 	FFResult SetTextParameter( unsigned int index, const char* value ) override;
 
