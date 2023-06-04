@@ -21,14 +21,13 @@ public:
 	std::shared_ptr< ffglqs::Param > animParam;
 	std::shared_ptr< ffglqs::ParamText > ipParam;
 	std::shared_ptr< ffglqs::ParamText > portParam;
-	std::shared_ptr< ffglqs::ParamText > addressParam;
-
+	std::vector< std::shared_ptr< ffglqs::ParamText > > addressParams;
+	
 	//we use these as callbacks to know when a param has been changed in Resolume
 	FFResult SetFloatParameter( unsigned int index, float value ) override;
 	FFResult SetTextParameter( unsigned int index, const char* value ) override;
 
 private:
-	void sendOsc();
 	void setPort();
 
 	juce::OSCSender sender;
