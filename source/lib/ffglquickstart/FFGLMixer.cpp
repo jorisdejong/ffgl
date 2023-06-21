@@ -35,7 +35,7 @@ Mixer::Mixer( bool supportTopLeftTextureOrientation ) :
 			i_uv_src = vUV * maxUVSrc;
 		}
 	)";
-	AddParam( Param::Create( "mixVal" ) );
+	AddParam( Param::Create( "Opacity" ) );
 }
 
 Mixer::~Mixer()
