@@ -12,6 +12,7 @@
 #include "ffglex/FFGLScopedShaderBinding.h"
 #include "ffglex/FFGLScopedTextureBinding.h"
 #include "ffglex/FFGLScopedVAOBinding.h"
+#include "ffglex/FFGLScopedFBOBinding.h"
 #include "ffglex/FFGLScreenQuad.h"
 #include "ffglex/FFGLShader.h"
 #include "ffglex/FFGLUtilities.h"
