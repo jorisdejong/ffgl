@@ -27,7 +27,7 @@ bool FFGLFBO::Initialise( GLsizei width, GLsizei height, GLint internalColorForm
 
 	//If any of the generation functions fail we'll release the resources that did successfully initialize so that
 	//we wont end up in a partially initialized state.
-	if( !GenerateFBO() || !GenerateDepthBuffer() || !GenerateColorTexture() )
+	if( !GenerateFBO() /*|| !GenerateDepthBuffer()*/ || !GenerateColorTexture() )
 	{
 		Release();
 		return false;
@@ -36,16 +36,16 @@ bool FFGLFBO::Initialise( GLsizei width, GLsizei height, GLint internalColorForm
 	//If we got to this point generating the depth buffer and color textures has succeeded so we can now attach them to the fbo.
 	//We use a reverting binding behaviour so that the bound fboIDs may be reverted back to the host's fbo.
 	ScopedFBOBinding scopedFBO( fboID, ScopedFBOBinding::RB_REVERT );
-	glFramebufferRenderbuffer( GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, depthBufferID );
+	/*glFramebufferRenderbuffer( GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_RENDERBUFFER, depthBufferID );*/
 	glFramebufferTexture2D( GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, colorTextureID, 0 );
 
-	//If the framebuffer status is not complete for some reason we'll release all the resources we've initialized so that
-	//they dont keep dangling around. The caller should not have to call Release if Initialise failed.
-	if( glCheckFramebufferStatus( GL_FRAMEBUFFER ) != GL_FRAMEBUFFER_COMPLETE )
-	{
-		Release();
-		return false;
-	}
+	////If the framebuffer status is not complete for some reason we'll release all the resources we've initialized so that
+	////they dont keep dangling around. The caller should not have to call Release if Initialise failed.
+	//if( glCheckFramebufferStatus( GL_FRAMEBUFFER ) != GL_FRAMEBUFFER_COMPLETE )
+	//{
+	//	Release();
+	//	return false;
+	//}
 
 	return true;
 }
