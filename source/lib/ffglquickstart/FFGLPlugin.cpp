@@ -72,7 +72,7 @@ FFResult Plugin::Render( ProcessOpenGLStruct* inputTextures )
 std::string Plugin::CreateFragmentShader( std::string base )
 {
 	std::string fragmentShaderCode = fragmentShaderCodeStart;
-	/*int i                          = 0;
+	int i                          = 0;
 	while( i < params.size() )
 	{
 		if( IsRGBColor( i ) )
@@ -94,7 +94,7 @@ std::string Plugin::CreateFragmentShader( std::string base )
 			fragmentShaderCode += "uniform float " + params[ i ]->GetName() + ";\n";
 		}
 		i += 1;
-	}*/
+	}
 
 	for( auto snippet : includedSnippets )
 	{
