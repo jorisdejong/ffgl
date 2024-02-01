@@ -3,7 +3,7 @@
 
 #include <iostream>
 
-static PluginInstance p = Effect::CreatePlugin< WipePlugin >( { PLUGIN_ID, "WipeFX" } );
+static PluginInstance p = Effect::CreatePlugin< WipePlugin >( { PLUGIN_ID, "Wipe" } );
 
 static const std::string fShader = R"(
 #define PI 3.141592654
