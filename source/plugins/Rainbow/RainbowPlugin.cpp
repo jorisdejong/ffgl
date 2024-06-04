@@ -33,10 +33,10 @@ void main() {
     float x = i_uv.x;
     x = Mirror ? abs ( x - 0.5 ) * 2.0 : x;
     x = fract ( x - HuePhase );
+
     vec3 hsv = rgb2hsv( tex.rgb );
-    hsv.r = x;
-    tex.rgb = hsv2rgb ( hsv );
-    tex.rgb *= tex.a;
+    hsv.rg = vec2( x, 1.0 );
+    tex.rgb = hsv2rgb ( hsv ) * tex.a;
     fragColor = tex;
 }
 
