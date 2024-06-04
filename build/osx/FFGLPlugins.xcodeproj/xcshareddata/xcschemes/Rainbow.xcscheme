@@ -16,7 +16,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0EA7BCD12C0F1579006C1144"
-               BuildableName = "Rainbow.bundle"
+               BuildableName = "FFGLRainbow.bundle"
                BlueprintName = "Rainbow"
                ReferencedContainer = "container:FFGLPlugins.xcodeproj">
             </BuildableReference>
@@ -51,7 +51,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0EA7BCD12C0F1579006C1144"
-            BuildableName = "Rainbow.bundle"
+            BuildableName = "FFGLRainbow.bundle"
             BlueprintName = "Rainbow"
             ReferencedContainer = "container:FFGLPlugins.xcodeproj">
          </BuildableReference>
