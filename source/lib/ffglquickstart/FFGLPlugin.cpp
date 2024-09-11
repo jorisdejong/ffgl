@@ -61,6 +61,12 @@ FFResult Plugin::DeInitGL()
 	return FF_SUCCESS;
 }
 
+FFResult Plugin::Connect()
+{
+	t_start = std::chrono::high_resolution_clock::now();
+	return FF_SUCCESS;
+}
+
 FFResult Plugin::Render( ProcessOpenGLStruct* inputTextures )
 {
 	//Activate our shader using the scoped binding so that we'll restore the context state when we're done.
@@ -111,7 +117,10 @@ void Plugin::UpdateAudioAndTime()
 	frame++;
 	auto t_now = std::chrono::high_resolution_clock::now();
 	timeNow    = std::chrono::duration< float, std::milli >( t_now - t_start ).count() / 1000.0f;
-	deltaTime  = timeNow - lastUpdate;
+	if( timeNow - lastUpdate < 1.0f && timeNow - lastUpdate > 0.002 ) //500fps
+		deltaTime = timeNow - lastUpdate;
+	else
+		std::cout <<  "deltaTime was " << ( timeNow - lastUpdate ) << std::endl;
 	lastUpdate = timeNow;
 
 	// Update FFT data

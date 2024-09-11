@@ -8,8 +8,16 @@ void SmoothValue::SetSmoothness( float smooth )
 }
 void SmoothValue::Update( float val )
 {
-	value *= smoothness;
-	value += ( 1 - smoothness ) * val;
+	if( onInit )
+	{
+		value = val;
+		onInit = false;
+	}
+	else
+	{
+		value *= smoothness;
+		value += ( 1 - smoothness ) * val;
+	}
 }
 float SmoothValue::GetValue()
 {
