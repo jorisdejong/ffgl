@@ -67,6 +67,8 @@ public:
 	/// \return					This implementation always returns FF_SUCCESS.
 	FFResult DeInitGL() override;
 
+	virtual FFResult Connect() override;
+
 	/// You can override this function to allocate any ressource you will need, shader for example. If any error
 	/// occured (shader fails to compile for example), return FF_FAIL.
 	/// \return                 FF_FAIL if any error occured else FF_SUCCESS
@@ -205,7 +207,7 @@ protected:
 	ffglex::FFGLScreenQuad quad;
 
 	float timeNow                                                         = 0;
-	float deltaTime                                                       = 0;
+	float deltaTime                                                       = 1 / 60.0f;
 	float lastUpdate                                                      = 0;
 	int frame                                                             = 0;
 	std::chrono::time_point< std::chrono::high_resolution_clock > t_start = std::chrono::high_resolution_clock::now();

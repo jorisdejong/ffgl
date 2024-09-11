@@ -14,6 +14,7 @@ public:
 private:
 	float smoothness = 0.80f;
 	float value      = 0.0f;
+	bool onInit      = true;
 };
 
 }//End namespace ffglqs
