@@ -119,8 +119,6 @@ void Plugin::UpdateAudioAndTime()
 	timeNow    = std::chrono::duration< float, std::milli >( t_now - t_start ).count() / 1000.0f;
 	if( timeNow - lastUpdate < 1.0f && timeNow - lastUpdate > 0.002 ) //500fps
 		deltaTime = timeNow - lastUpdate;
-	else
-		std::cout <<  "deltaTime was " << ( timeNow - lastUpdate ) << std::endl;
 	lastUpdate = timeNow;
 
 	// Update FFT data
