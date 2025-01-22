@@ -82,7 +82,7 @@ public:
 	/// This method returns the name of the plugin parameter whose index is passed as parameter
 	/// to the method. It is usually called by the default implementations of the FreeFrame global functions.
 	///
-	/// \param	dwIndex		The index of the plugin parameter whose name is queried.
+	/// \param	index		The index of the plugin parameter whose name is queried.
 	///						It should be in the range [0, Number of plugin parameters).
 	/// \return				The name of the plugin parameter whose index is passed to the method.
 	///						The return value is a pointer to an array of 16 1-byte ASCII characters,
@@ -91,7 +91,7 @@ public:
 	/// This method is called to know the type of the plugin parameter whose index is passed as parameter
 	/// to the method. It is usually called by the default implementations of the FreeFrame global functions.
 	///
-	/// \param	dwIndex		The index of the plugin parameter whose name is queried.
+	/// \param	index		The index of the plugin parameter whose name is queried.
 	///						It should be in the range [0, Number of plugin parameters).
 	/// \return				The type of the plugin parameter whose index is passed as parameter to the method.
 	///						Codes for allowed parameter types are defined in FreeFrame.h.
@@ -250,12 +250,12 @@ protected:
 	/// the SetParamInfo function (DefaultValue of type float) should be called for all types of plugin parameters
 	/// except for text, boolean, and event parameters.
 	///
-	/// \param	dwIndex			Index of the plugin parameter whose data are specified.
+	/// \param	index			Index of the plugin parameter whose data are specified.
 	///							It should be in the range [0, Number of plugin parameters).
 	/// \param	pchName			A string containing the name of the plugin parameter.
 	///							According to the FreeFrame specification it should be at most 16 1-byte ASCII
 	///							characters long. Longer strings will be truncated at the 16th character.
-	/// \param	dwType			The type of the plugin parameter. Codes for allowed types are defined in FreeFrame.h.
+	/// \param	type			The type of the plugin parameter. Codes for allowed types are defined in FreeFrame.h.
 	/// \param	fDefaultValue	The default value of the plugin parameter. According to the FreeFrame
 	///							specification it must be a float in the range [0, 1].
 	void SetParamInfo( unsigned int index, const char* pchName, unsigned int type, float fDefaultValue );
@@ -265,12 +265,12 @@ protected:
 	/// the SetParamInfo function (DefaultValue of type bool) should be called for plugin parameters of type
 	/// boolean or event.
 	///
-	/// \param	dwIndex			Index of the plugin parameter whose data are specified.
+	/// \param	index			Index of the plugin parameter whose data are specified.
 	///							It should be in the range [0, Number of plugin parameters).
 	/// \param	pchName			A string containing the name of the plugin parameter.
 	///							According to the FreeFrame specification it should be at most 16 1-byte ASCII
 	///							characters long. Longer strings will be truncated at the 16th character.
-	/// \param	dwType			The type of the plugin parameter. Codes for allowed types are defined in FreeFrame.h.
+	/// \param	type			The type of the plugin parameter. Codes for allowed types are defined in FreeFrame.h.
 	/// \param	bDefaultValue	The boolean default value of the plugin parameter.
 	void SetParamInfo( unsigned int index, const char* pchName, unsigned int type, bool bDefaultValue );
 	/// This method is called by a plugin subclass, derived from this class, to specify name, type, and default
@@ -278,12 +278,12 @@ protected:
 	/// called when a plugin object is instantiated (i.e., in the plugin subclass contructor). This version of
 	/// the SetParamInfo function (DefaultValue of type char*) should be called for plugin parameters of type text.
 	///
-	/// \param	dwIndex			Index of the plugin parameter whose data are specified.
+	/// \param	index			Index of the plugin parameter whose data are specified.
 	///							It should be in the range [0, Number of plugin parameters).
 	/// \param	pchName			A string containing the name of the plugin parameter.
 	///							According to the FreeFrame specification it should be at most 16 1-byte ASCII
 	///							characters long. Longer strings will be truncated at the 16th character.
-	/// \param	dwType			The type of the plugin parameter. Codes for allowed types are defined in FreeFrame.h.
+	/// \param	type			The type of the plugin parameter. Codes for allowed types are defined in FreeFrame.h.
 	/// \param	pchDefaultValue	A string to be used as the default value of the plugin parameter.
 	void SetParamInfo( unsigned int index, const char* pchName, unsigned int type, const char* pchDefaultValue );
 

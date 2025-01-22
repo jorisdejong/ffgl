@@ -100,7 +100,7 @@ public:
 	///
 	/// \param width		The width of the thumbnail in number of pixels.
 	/// \param height		The height of the thumbnail in number of pixels.
-	/// \param ownedPixels	A vector of colors representing the thumbnail pixels' colors. This vector is expected to be width*height in size.
+    /// \param pixelData	A vector of colors representing the thumbnail pixels' colors. This vector is expected to be width*height in size.
 	CFFGLThumbnailInfo( FFUInt32 width, FFUInt32 height, const CFFGLColor* pixelData );
 
 	/// Get the width of the thumbnail in number of pixels.
