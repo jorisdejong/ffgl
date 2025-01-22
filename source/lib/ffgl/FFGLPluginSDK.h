@@ -76,7 +76,7 @@ public:
 	/// implementation just returns the string representation of the float value of the plugin parameter. A custom
 	/// implementation may be provided by every specific plugin.
 	///
-	/// \param		dwIndex		The index of the parameter whose display value is queried.
+	/// \param		index		The index of the parameter whose display value is queried.
 	///							It should be in the range [0, Number of plugin parameters).
 	/// \return					The display value of the plugin parameter or NULL in case of error
 	virtual char* GetParameterDisplay( unsigned int index );
@@ -106,10 +106,8 @@ public:
 
 	/// Default implementation of the FFGL SetTime instance specific function
 	///
-	/// \param		pOpenGLData to a ProcessOpenGLStruct structure (see the definition in FFGL.h and
-	///						the description in the FFGL specification).
-	/// \return		The default implementation always returns FF_FAIL.
-	///						A custom implementation must be provided by every specific plugin.
+	/// \param		time set by the host
+	/// \return		The default implementation always returns FF_SUCCESS
 	virtual FFResult SetTime( double time )
 	{
 		hostTime = time;
@@ -126,7 +124,7 @@ public:
 	/// to know whether a given input is currently in use. For the default implementation every input is always in use.
 	/// A custom implementation may be provided by every specific plugin.
 	///
-	/// \param		dwIndex		The index of the input whose status is queried.
+	/// \param		index		The index of the input whose status is queried.
 	///							It should be in the range [Minimum number of inputs, Maximum number of inputs).
 	/// \return					The default implementation always returns FF_FF_INPUT_INUSE or FF_FAIL if the index
 	///							is out of range. A custom implementation may be provided by every specific plugin.
