@@ -914,6 +914,7 @@
 				0EA7BCD22C0F1579006C1144 /* Resources */,
 				0EA7BCD32C0F1579006C1144 /* Sources */,
 				0EA7BCF62C0F1579006C1144 /* Frameworks */,
+				0EFA2F022E1D3EDD00A1917A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1129,6 +1130,23 @@
 
 /* Begin PBXShellScriptBuildPhase section */
 		0E2F67742DB5781200D432B7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/generate_plist.sh\"\n/Users/hybrid/Documents/Develop/hybridffgl/build/osx/notarize.sh\n";
+		};
+		0EFA2F022E1D3EDD00A1917A /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (

@@ -1,7 +1,20 @@
 
 #include "RainbowPlugin.h"
 
-static PluginInstance p = Effect::CreatePlugin< RainbowPlugin >( { PLUGIN_ID, "Rainbow" } );
+#include "version.h"
+
+ffglqs::PluginInstance p (
+                                          PluginFactory< RainbowPlugin >,// Create method, allows the host to create a new instance of the plugin
+                                          "HV18",           // Plugin unique ID
+                                          "Rainbow",         // Plugin name
+                                          2,                          // API major version number
+                                          1,                          // API minor version number
+                                          VERSION_MAJOR,         // Plugin major version number
+                                          VERSION_MINOR,         // Plugin minor version number
+                                          FF_EFFECT,                       // Plugin type
+                                          "Screw your hue and saturation, there is only rainbooooow",  // Plugin description
+                                          "Joris de Jong // Hybrid Constructs"         // About
+                                      );
 
 static const std::string fShader = R"(
 

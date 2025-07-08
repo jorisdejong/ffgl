@@ -1,7 +1,5 @@
 #pragma once
 
-#define PLUGIN_ID "HV18"
-
 #include <FFGLSDK.h>
 
 using namespace ffglqs;
