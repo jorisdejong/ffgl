@@ -348,13 +348,16 @@
 /* Begin PBXFileReference section */
 		0E2F67262DB554FF00D432B7 /* PulseColor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PulseColor.cpp; sourceTree = "<group>"; };
 		0E2F67272DB554FF00D432B7 /* PulseColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PulseColor.h; sourceTree = "<group>"; };
-		0E2F67652DB574AB00D432B7 /* PulseColor.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PulseColor.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E2F67652DB574AB00D432B7 /* FFGLPulseColor.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FFGLPulseColor.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E2F676E2DB5774800D432B7 /* juce_core.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = juce_core.mm; path = ../../../JUCE/modules/juce_core/juce_core.mm; sourceTree = "<group>"; };
 		0E2F67702DB5777B00D432B7 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		0E2F67722DB577BA00D432B7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		0EA7BCFA2C0F1579006C1144 /* FFGLRainbow.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FFGLRainbow.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EA7BCFC2C0F16E0006C1144 /* RainbowPlugin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RainbowPlugin.cpp; sourceTree = "<group>"; };
 		0EA7BCFD2C0F16E0006C1144 /* RainbowPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RainbowPlugin.h; sourceTree = "<group>"; };
+		0EFA2EFF2E1D0C2700A1917A /* version.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
+		0EFA2F002E1D0CB800A1917A /* Info.plist.in.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist.in.plist; sourceTree = "<group>"; };
+		0EFA2F012E1D0DD200A1917A /* generate_plist.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = generate_plist.sh; sourceTree = "<group>"; };
 		1B2708B321635F6D002B8B05 /* FFGL.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FFGL.cpp; sourceTree = "<group>"; };
 		1B2708B421635F6D002B8B05 /* FFGLPluginManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FFGLPluginManager.cpp; sourceTree = "<group>"; };
 		1B2708B521635F6D002B8B05 /* FFGLPluginInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFGLPluginInfo.h; sourceTree = "<group>"; };
@@ -548,6 +551,7 @@
 			children = (
 				0E2F67262DB554FF00D432B7 /* PulseColor.cpp */,
 				0E2F67272DB554FF00D432B7 /* PulseColor.h */,
+				0EFA2EFF2E1D0C2700A1917A /* version.h */,
 			);
 			name = PulseColor;
 			path = ../../source/plugins/PulseColor;
@@ -628,6 +632,8 @@
 		2DA285910AEE5D640030A4DD = {
 			isa = PBXGroup;
 			children = (
+				0EFA2F012E1D0DD200A1917A /* generate_plist.sh */,
+				0EFA2F002E1D0CB800A1917A /* Info.plist.in.plist */,
 				D69416991B90420600D30319 /* xcconfig */,
 				D69416971B9041FA00D30319 /* FFGLPlugin-Info.plist */,
 				D69416961B9040DA00D30319 /* PluginIds.txt */,
@@ -651,7 +657,7 @@
 				65D4D1E723193D0000D12558 /* CustomThumbnail.bundle */,
 				F49A35EE264ECC2A008127CC /* Events.bundle */,
 				0EA7BCFA2C0F1579006C1144 /* FFGLRainbow.bundle */,
-				0E2F67652DB574AB00D432B7 /* PulseColor.bundle */,
+				0E2F67652DB574AB00D432B7 /* FFGLPulseColor.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -898,7 +904,7 @@
 			);
 			name = PulseColor;
 			productName = FFGLBrightness;
-			productReference = 0E2F67652DB574AB00D432B7 /* PulseColor.bundle */;
+			productReference = 0E2F67652DB574AB00D432B7 /* FFGLPulseColor.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		0EA7BCD12C0F1579006C1144 /* Rainbow */ = {
@@ -1137,7 +1143,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/Users/hybrid/Documents/Develop/hybridffgl/build/osx/notarize.sh\n";
+			shellScript = "\"${SRCROOT}/generate_plist.sh\"\n/Users/hybrid/Documents/Develop/hybridffgl/build/osx/notarize.sh\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1526,14 +1532,16 @@
 					"$(PREPROCESSOR_BASE)",
 					"JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1",
 				);
+				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(FFGL_SDK_PATH)\"",
 					../../../juce/modules,
 				);
-				INFOPLIST_FILE = "FFGLPlugin-Info.plist";
+				INFOPLIST_FILE = "";
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "";
+				PRODUCT_NAME = "FFGL$(TARGET_NAME)";
 				WRAPPER_EXTENSION = bundle;
 				ZERO_LINK = NO;
 			};
@@ -1560,14 +1568,16 @@
 					"$(PREPROCESSOR_BASE)",
 					"JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1",
 				);
+				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(FFGL_SDK_PATH)\"",
 					../../../juce/modules,
 				);
-				INFOPLIST_FILE = "FFGLPlugin-Info.plist";
+				INFOPLIST_FILE = "";
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "";
+				PRODUCT_NAME = "FFGL$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = bundle;
 				ZERO_LINK = NO;

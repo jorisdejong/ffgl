@@ -3,7 +3,20 @@
 
 #include <ffglex/FFGLUtilities.h>
 
-ffglqs::PluginInstance p = ffglqs::Effect::CreatePlugin< PulseColor >( { "HV99", "PulseColor" } );
+#include "version.h"
+
+ffglqs::PluginInstance p (
+                                          PluginFactory< PulseColor >,// Create method, allows the host to create a new instance of the plugin
+                                          "HV36",           // Plugin unique ID
+                                          "PulseColor",         // Plugin name
+                                          2,                          // API major version number
+                                          1,                          // API minor version number
+                                          VERSION_MAJOR,         // Plugin major version number
+                                          VERSION_MINOR,         // Plugin minor version number
+                                          FF_EFFECT,                       // Plugin type
+                                          "Control Pulse UI color from Resolume",  // Plugin description
+                                          "Joris de Jong // Hybrid Constructs"         // About
+                                      );
 
 PulseColor::PulseColor() :
 	ffglqs::Effect( true ),
