@@ -19,6 +19,7 @@ ffglqs::PluginInstance p (
 static const std::string fShader = R"(
 
 uniform float HuePhase;
+uniform bool Mirror;
 
 vec3 rgb2hsv(vec3 c)
 {

@@ -9,6 +9,9 @@ static const std::string fShader = R"(
 #define PI 3.141592654
 
 uniform float Phase;
+uniform float Width;
+uniform float Angle;
+uniform bool Mirror;
 
 mat2 rotate2d(float _angle){
     return mat2(cos(_angle),-sin(_angle),

@@ -7,7 +7,7 @@
 
 ffglqs::PluginInstance p (
                                           PluginFactory< PulseColor >,// Create method, allows the host to create a new instance of the plugin
-                                          "HV36",           // Plugin unique ID
+                                          "HV37",           // Plugin unique ID
                                           "PulseColor",         // Plugin name
                                           2,                          // API major version number
                                           1,                          // API minor version number
@@ -20,7 +20,8 @@ ffglqs::PluginInstance p (
 
 PulseColor::PulseColor() :
 	ffglqs::Effect( true ),
-	socket( true )
+	socket( true ),
+	dirty( false )
 {
 	AddHueColorParam( "PulseColor" );
 }
