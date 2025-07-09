@@ -83,6 +83,7 @@
     <ClInclude Include="..\..\source\lib\ffgl\FFGLPluginSDK.h" />
     <ClInclude Include="..\..\source\lib\ffgl\FFGLThumbnailInfo.h" />
     <ClInclude Include="..\..\source\plugins\Rainbow\RainbowPlugin.h" />
+    <ClInclude Include="..\..\source\plugins\Rainbow\version.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{FE5689DA-997C-4748-98AF-1A0458168F51}</ProjectGuid>
@@ -171,8 +172,12 @@
       <AdditionalLibraryDirectories>..\..\..\source\common\opengl\lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>OpenGL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>$(SolutionDir)..\..\..\hybridapi\Codesign\azure.cmd $(TargetPath)</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
+  <Import Project="AutoVersion.targets" />
 </Project>

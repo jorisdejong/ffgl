@@ -211,6 +211,7 @@
       <Filter>lib\ffgl</Filter>
     </ClInclude>
     <ClInclude Include="..\..\source\plugins\PulseColor\PulseColor.h" />
+    <ClInclude Include="..\..\source\plugins\PulseColor\Version.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="lib">

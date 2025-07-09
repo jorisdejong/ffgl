@@ -85,6 +85,7 @@
     <ClInclude Include="..\..\source\lib\ffgl\FFGLPluginSDK.h" />
     <ClInclude Include="..\..\source\lib\ffgl\FFGLThumbnailInfo.h" />
     <ClInclude Include="..\..\source\plugins\PulseColor\PulseColor.h" />
+    <ClInclude Include="..\..\source\plugins\PulseColor\Version.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{9A2A2BA2-4A85-47B8-B6C7-DDD7BECD8AB6}</ProjectGuid>
@@ -182,4 +183,5 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
+  <Import Project="AutoVersion.targets" />
 </Project>
