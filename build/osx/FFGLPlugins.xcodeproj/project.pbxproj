@@ -390,7 +390,6 @@
 		0EA7BCFC2C0F16E0006C1144 /* RainbowPlugin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RainbowPlugin.cpp; sourceTree = "<group>"; };
 		0EA7BCFD2C0F16E0006C1144 /* RainbowPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RainbowPlugin.h; sourceTree = "<group>"; };
 		0EFA2EFF2E1D0C2700A1917A /* version.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
-		0EFA2F002E1D0CB800A1917A /* Info.plist.in.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist.in.plist; sourceTree = "<group>"; };
 		0EFA2F012E1D0DD200A1917A /* generate_plist.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = generate_plist.sh; sourceTree = "<group>"; };
 		0EFA2F082E1E5FC200A1917A /* version.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
 		0EFA2F092E1E666D00A1917A /* Version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Version.h; sourceTree = "<group>"; };
@@ -691,7 +690,6 @@
 			isa = PBXGroup;
 			children = (
 				0EFA2F012E1D0DD200A1917A /* generate_plist.sh */,
-				0EFA2F002E1D0CB800A1917A /* Info.plist.in.plist */,
 				D69416991B90420600D30319 /* xcconfig */,
 				D69416971B9041FA00D30319 /* FFGLPlugin-Info.plist */,
 				D69416961B9040DA00D30319 /* PluginIds.txt */,

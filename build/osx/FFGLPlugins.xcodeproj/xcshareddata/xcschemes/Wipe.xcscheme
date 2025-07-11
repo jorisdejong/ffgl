@@ -16,7 +16,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0EFA2F0D2E1E66CE00A1917A"
-               BuildableName = "Wipe.bundle"
+               BuildableName = "FFGLWipe.bundle"
                BlueprintName = "Wipe"
                ReferencedContainer = "container:FFGLPlugins.xcodeproj">
             </BuildableReference>
@@ -51,7 +51,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0EFA2F0D2E1E66CE00A1917A"
-            BuildableName = "Wipe.bundle"
+            BuildableName = "FFGLWipe.bundle"
             BlueprintName = "Wipe"
             ReferencedContainer = "container:FFGLPlugins.xcodeproj">
          </BuildableReference>
