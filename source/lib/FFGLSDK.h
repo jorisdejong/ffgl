@@ -9,6 +9,7 @@
 #include "ffglex/FFGLScopedBufferBinding.h"
 #include "ffglex/FFGLScopedFBOBinding.h"
 #include "ffglex/FFGLScopedSamplerActivation.h"
+#include "ffglex/FFGLScopedFBOBinding.h"
 #include "ffglex/FFGLScopedShaderBinding.h"
 #include "ffglex/FFGLScopedTextureBinding.h"
 #include "ffglex/FFGLScopedVAOBinding.h"
