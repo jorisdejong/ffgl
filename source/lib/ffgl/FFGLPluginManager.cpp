@@ -276,13 +276,13 @@ void CFFGLPluginManager::SetParamInfo( unsigned int paramID, const char* pchName
 	pInfo.name  = pchName;
 
 	pInfo.dwType = pType;
-	if( pType == FF_TYPE_STANDARD )
+	/*if( pType == FF_TYPE_STANDARD )
 	{
 		if( fDefaultValue > 1.0 )
 			fDefaultValue = 1.0;
 		if( fDefaultValue < 0.0 )
 			fDefaultValue = 0.0;
-	}
+	}*/
 
 	pInfo.defaultFloatVal = fDefaultValue;
 	params.push_back( pInfo );
